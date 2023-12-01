@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap');
 
-img {
-    width: 25%; 
-    height: auto; 
-}
+
 
 body{
     font-family: "Spline Sans", sans serif;
@@ -24,6 +21,19 @@ a{
 a:hover{
     color: #F58d17;
 }
+
+img {
+    width: 25%; 
+    height: auto; 
+}
+
+section{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+/* btn */
+
 .btn{
     border: 0;
     padding: 14px 38px;
@@ -55,6 +65,30 @@ a:hover{
 
 .with-underline {
     text-decoration: underline;
-    text-decoration-color: white; /* İstenilen renk */
+    text-decoration-color: white;
+}
+/* about */
+
+#about img {
+    width: 100%; 
+    height: auto; 
 }
 
+#about .divider{
+    width: 60px;
+    height: 2px;
+    display: block;
+    background-color: #d81b60;
+
+}
+
+/* intro */
+
+.intro-text {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.intro-text p{
+    max-width: 500px;
+    margin: 16px auto 0 auto;
+}
