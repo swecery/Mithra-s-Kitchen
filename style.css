@@ -140,3 +140,7 @@ section{
     align-content: center;
     text-align: center;
 }
+.mb-custom {
+    margin-bottom: 2rem;
+}
+
