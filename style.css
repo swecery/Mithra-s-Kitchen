@@ -32,6 +32,13 @@ section{
     padding-bottom: 120px;
 }
 
+.shadow-on-hover{
+    transition: all 0.2s;
+}
+
+.shadow-on-hover:hover{
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
 /* btn */
 
 .btn{
@@ -105,4 +112,14 @@ section{
 #menu .nav-pills .nav-link.active {
     background-color: #d81b60;
     color: #fff;
+}
+
+.enlarge-image {
+    width: 80%; 
+    height: auto; 
+}
+
+.menu-item .stars {
+    color: #F58d17;
+
 }

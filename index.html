@@ -1,185 +1,378 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Mithra's Kitchen</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mithra's Kitchen</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
   <body>
-
     <!--Navbar-->
 
-
     <nav class="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
-        <div class="container">
-          <a class="navbar-brand" href="#"></a>
-          <img src="images/mithraLogo.png" alt="logo">
+      <div class="container">
+        <a class="navbar-brand" href="#"></a>
+        <img src="images/mithraLogo.png" alt="logo" />
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#reservation">Reservation</a>
-              </li>
-              
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Menu
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="vegan">Vegan</a></li>
-                  <li><a class="dropdown-item" href="meat">Meat</a></li>
-                  <li><a class="dropdown-item" href="chicken">Chicken</a></li>
-                  <li><a class="dropdown-item" href="fish">Fish</a></li>
-                </ul>
-              </li>
-              
-            </ul>
-            <a href="#" class="btn btn-brand">Order Online</a>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reservation">Reservation</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Menu
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="vegan">Vegan</a></li>
+                <li><a class="dropdown-item" href="meat">Meat</a></li>
+                <li><a class="dropdown-item" href="chicken">Chicken</a></li>
+                <li><a class="dropdown-item" href="fish">Fish</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-brand">Order Online</a>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--Hero Slider-->
+
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item text-center bg-cover vh-100 active slide-1">
+          <div
+            class="container h-100 d-flex align-items-center justify-content-center"
+          >
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <h6 class="text-white with-underline">
+                  WELCOME TO MITHRA'S KITCHEN
+                </h6>
+                <h1 class="display1 fw-bold text-white">
+                  Suitable For Every Taste
+                </h1>
+                <a href="#" class="btn btn-brand">Reservation</a>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-          <!--Hero Slider-->
 
-          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item text-center bg-cover vh-100 active slide-1">
-                    <div class="container h-100 d-flex align-items-center justify-content-center">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <h6 class="text-white with-underline">WELCOME TO MITHRA'S KITCHEN</h6>
-                                <h1 class="display1 fw-bold text-white">Suitable For Every Taste</h1>
-                                <a href="#" class="btn btn-brand">Reservation</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="carousel-item text-center bg-cover vh-100 active slide-2">
-                    <div class="container h-100 d-flex align-items-center justify-content-center">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <h6 class="text-white with-underline">WELCOME TO MITHRA'S KITCHEN</h6>
-                                <h1 class="display1 fw-bold text-white">Reasonable Price And Best Quality</h1>
-                                <a href="#" class="btn btn-brand">Reservation</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="carousel-item text-center bg-cover vh-100 active slide-2">
+          <div
+            class="container h-100 d-flex align-items-center justify-content-center"
+          >
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <h6 class="text-white with-underline">
+                  WELCOME TO MITHRA'S KITCHEN
+                </h6>
+                <h1 class="display1 fw-bold text-white">
+                  Reasonable Price And Best Quality
+                </h1>
+                <a href="#" class="btn btn-brand">Reservation</a>
+              </div>
             </div>
-        
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-        
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+          </div>
         </div>
+      </div>
 
-        <!--About-->
-        <section id="about">
-            <div class="container">
-                <div class="row gy-4 align-items-center">
-                    <div class="col-lg-5">
-                        <img src="images/vegan2.jpg" alt="">
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!--About-->
+    <section id="about">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-5">
+            <img src="images/vegan2.jpg" alt="" />
+          </div>
+          <div class="col-lg-5">
+            <h1>About Us</h1>
+            <div class="divider my-4"></div>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Perferendis, corporis. Distinctio perferendis nostrum rerum at
+              praesentium porro ipsam quibusdam qui recusandae unde, ea eum
+              soluta? Corrupti officia sed minus ducimus?
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit
+              tempora dolor minima quibusdam laudantium corporis adipisci enim,
+              mollitia repellendus odio repudiandae, perspiciatis assumenda ipsa
+              accusamus similique eum? Est, voluptates ut.
+            </p>
+            <a href="#" class="btn btn-brand">Explore Menu</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 intro-text">
+            <h1>Explore Our Menu</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              maiores dignissimos sit eligendi excepturi, magni dolorem
+              recusandae quis cumque ducimus inventore unde quidem, itaque
+              temporibus illo a fuga odit corrupti?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul
+          class="nav nav-pills mb-3 justify-content-center"
+          id="pills-tab"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-breakfast-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-breakfast"
+              type="button"
+              role="tab"
+              aria-controls="pills-breakast"
+              aria-selected="true"
+            >
+              Breakfast
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-lunch-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-lunch"
+              type="button"
+              role="tab"
+              aria-controls="pills-lunch"
+              aria-selected="true"
+            >
+              Lunch
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-dinner-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-dinner"
+              type="button"
+              role="tab"
+              aria-controls="pills-dinner"
+              aria-selected="true"
+            >
+              Dinner
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="pills-breakfast"
+            role="tabpanel"
+            aria-labelledby="pills-breakfast-tab"
+            tabindex="0"
+          >
+            <div class="row gy-4">
+              <div class="col-lg-3 col-gy-4">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="images/chicken2.jpg" alt="" class="enlarge-image">
+                  <div class="menu-item-content p-4">
+                    <div>
+                      <span>Rated(5.4)</span>
+                      <span class="stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                      </span>
                     </div>
-                    <div class="col-lg-5">
-                        <h1>About Us</h1>
-                        <div class="divider my-4"></div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, corporis. Distinctio perferendis nostrum rerum at praesentium porro ipsam quibusdam qui recusandae unde, ea eum soluta? Corrupti officia sed minus ducimus?</p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit tempora dolor minima quibusdam laudantium corporis adipisci enim, mollitia repellendus odio repudiandae, perspiciatis assumenda ipsa accusamus similique eum? Est, voluptates ut.</p>
-                        <a href="#" class="btn btn-brand">Explore Menu</a>
-                    </div>
-                </div>
-            </div>
+                    <h5 class="mt-1 mb-2"><a href="#">Breakfast</a></h5>
+                    <p class="small">Lorem ipsum icing elit. Natus consequatur nostrum id reiciendis. Architecto consectetur dolor impedit! Inventore voluptas corporis ducimus rerum accusamus eum al</p>
 
-        </section>
-
-        <!-- Menu -->
-        <section id="menu" class="bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 intro-text">
-                        <h1>Explore Our Menu</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam maiores dignissimos sit eligendi excepturi, magni dolorem recusandae quis cumque ducimus inventore unde quidem, itaque temporibus illo a fuga odit corrupti?</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-              <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All Items</button>
-                </li>
-
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="pills-breakfast-tab" data-bs-toggle="pill" data-bs-target="#pills-breakfast" type="button" role="tab" aria-controls="pills-breakfast" aria-selected="true">Breakfast</button>
-                </li>
-
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="pills-lunch-tab" data-bs-toggle="pill" data-bs-target="#pills-lunch" type="button" role="tab" aria-controls="pills-lunch" aria-selected="true">Lunch</button>
-                </li>
-
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="pills-dinner-tab" data-bs-toggle="pill" data-bs-target="#pills-dinner" type="button" role="tab" aria-controls="pills-dinner" aria-selected="true">Dinner</button>
-                </li>
-              
-              </ul>
-
-              <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
-                  
-                  <div class="row">
-                    <div class="col-lg-3 col-sm-6">
-                      <div class="menu-item">
-                        <img src="images/chicken2.jpg" alt="">
-                        <div class="menu-item-content">
-                          *
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
+              </div>
+              <div class="col-lg-3 col-gy-4">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="images/chicken2.jpg" alt="" class="enlarge-image">
+                  <div class="menu-item-content p-4">
+                    <div>
+                      <span>Rated(5.4)</span>
+                      <span class="stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                      </span>
+                    </div>
+                    <h5 class="mt-1 mb-2"><a href="#">Breakfast</a></h5>
+                    <p class="small">Lorem ipsum icing elit. Natus consequatur nostrum id reiciendis. Architecto consectetur dolor impedit! Inventore voluptas corporis ducimus rerum accusamus eum al</p>
 
-                <div class="tab-pane fade show" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab" tabindex="0">
-                  <h4>Breakfast Dishes</h4>
-                </div>
-
-                <div class="tab-pane fade show" id="pills-lunch" role="tabpanel" aria-labelledby="pills-lunch-tab" tabindex="0">
-                  <h4>Lunch Dishes</h4>
-                </div>
-
-                <div class="tab-pane fade show" id="pills-dinner" role="tabpanel" aria-labelledby="pills-dinner-tab" tabindex="0">
-                  <h4>Dinner Dishes</h4>
+                  </div>
                 </div>
                 
               </div>
+
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="images/chicken2.jpg" alt="" class="enlarge-image">
+                  <div class="menu-item-content p-4">
+                    <div>
+                      <span>Rated(5.4)</span>
+                      <span class="stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                      </span>
+                    </div>
+                    <h5 class="mt-1 mb-2"><a href="#">Breakfast</a></h5>
+                    <p class="small">Lorem ipsum icing elit. Natus consequatur nostrum id reiciendis. Architecto consectetur dolor impedit! Inventore voluptas corporis ducimus rerum accusamus eum al</p>
+
+                  </div>
+                </div>
+                
+              </div>
+
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="images/chicken2.jpg" alt="" class="enlarge-image">
+                  <div class="menu-item-content p-4">
+                    <div>
+                      <span>Rated(5.4)</span>
+                      <span class="stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                      </span>
+                    </div>
+                    <h5 class="mt-1 mb-2"><a href="#">Breakfast</a></h5>
+                    <p class="small">Lorem ipsum icing elit. Natus consequatur nostrum id reiciendis. Architecto consectetur dolor impedit! Inventore voluptas corporis ducimus rerum accusamus eum al</p>
+
+                  </div>
+                </div>
+                
+              </div>
+
             </div>
-              
-        </section>
-        
+          </div>
 
+          <div
+            class="tab-pane fade show"
+            id="pills-breakfast"
+            role="tabpanel"
+            aria-labelledby="pills-breakfast-tab"
+            tabindex="0"
+          >
+            <h4>Breakfast Dishes</h4>
+          </div>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+          <div
+            class="tab-pane fade show"
+            id="pills-lunch"
+            role="tabpanel"
+            aria-labelledby="pills-lunch-tab"
+            tabindex="0"
+          >
+            <h4>Lunch Dishes</h4>
+          </div>
+
+          <div
+            class="tab-pane fade show"
+            id="pills-dinner"
+            role="tabpanel"
+            aria-labelledby="pills-dinner-tab"
+            tabindex="0"
+          >
+            <h4>Dinner Dishes</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
