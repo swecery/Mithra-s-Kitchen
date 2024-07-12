@@ -78,21 +78,52 @@
               </form>
             <div class="d-flex" role="login">
               <a href="login.html">
-              <button class="btn btn-outline-success"  type="button">
+              <button class="btn btn-outline-success" type="button">
                 Login
               </button></a>
             </div>
           </div>
         </div>
       </nav>
-   
+
+      <!-- Reservation section -->
+
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title text-center mb-4">Reservation</h3>
+                <form>
+                  <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="time" class="form-label">Time</label>
+                    <input type="time" class="form-control" id="time" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="guests" class="form-label">Number of Guests</label>
+                    <input type="number" class="form-control" id="guests" min="1" max="20" required>
+                  </div>
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-block">Reserve</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Footer Section -->
     <footer class="bg-dark text-white pt-5 pb-4">
         <div class="container text-md-left">
           <div class="row text-md-left">
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
               <h5 class="text-uppercase text-white mb-4 font-weight-bold border-bottom pb-2">Mithra's Kitchen</h5>
-              <p>d
+              <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dicta nihil, culpa sapiente inventore aliquam temporibus dolores est ipsum de.
               </p>
             </div>
@@ -124,7 +155,28 @@
               </p>
             </div>
   
-            
+            <div class="col-md-5 col-lg-4">
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                      <i class="fab fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                      <i class="fab fa-google-plus"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
                   </li>
                 </ul>
               </div>
