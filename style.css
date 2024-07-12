@@ -51,6 +51,7 @@ section{
     font-weight: 500;
     border-color: #d81b60; 
     color: #d81b60; 
+    margin-right: 10px;
 }
 .btn-brand:hover{
     border-color: #d81b6090; 

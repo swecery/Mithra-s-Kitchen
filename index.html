@@ -14,6 +14,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -67,16 +68,21 @@
           </ul>
           <a href="#" class="btn btn-brand">Order Online</a>
           <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <div class="input-group">
+              <input
+                class="form-control border-end-0"   
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </div>
           </form>
+          <div class="d-flex" role="login">
+            <a href="login.html">
+              <button class="btn btn-outline-success" type="button">
+                Login
+              </button>
+          </div>
         </div>
       </div>
     </nav>
