@@ -41,13 +41,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="reservation.html">Reservation</a>
+              <a class="nav-link" href="/reservation">Reservation</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -80,7 +80,7 @@
             </div>
           </form>
           <div class="d-flex" role="login">
-            <a href="login.html">
+            <a href="/login">
               <button class="btn btn-outline-success" type="button">
                 Login
               </button>
@@ -147,7 +147,7 @@
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
-      </button>
+      </button>     
     </div>
 
     <!--About-->
@@ -257,7 +257,7 @@
             <div class="row gy-4">
               <div class="col-lg-3 col-sm-6">
                 <div class="menu-item bg-white shadow-on-hover">
-                  <img src="images/breakfast1.jpg" alt="" class="enlarge-image">
+                  <img src="{% static 'images/breakfast1.jpg' %}" alt="" class="enlarge-image">
                   <div class="menu-item-content p-4">
                     <div>
                       <span>Rated(5.4)</span>
@@ -277,7 +277,7 @@
               </div>
               <div class="col-lg-3 col-sm-6">
                 <div class="menu-item bg-white shadow-on-hover">
-                  <img src="images/breakfast2.jpg" alt="" class="enlarge-image">
+                  <img src="{% static 'images/breakfast2.jpg' %}" alt="" class="enlarge-image">
                   <div class="menu-item-content p-4">
                     <div>
                       <span>Rated(5.4)</span>
@@ -299,7 +299,7 @@
 
               <div class="col-lg-3 col-sm-6">
                 <div class="menu-item bg-white shadow-on-hover">
-                  <img src="images/breakfast3.jpg" alt="" class="enlarge-image">
+                  <img src="{% static 'images/breakfast3.jpg' %}" alt="" class="enlarge-image">
                   <div class="menu-item-content p-4">
                     <div>
                       <span>Rated(5.4)</span>
@@ -355,7 +355,7 @@
             <div class="row gy-4">
               <div class="col-lg-3 col-sm-6">
                 <div class="menu-item bg-white shadow-on-hover">
-                  <img src="images/lunch2.jpg" alt="" class="enlarge-image">
+                  <img src="{% static 'images/lunch2.jpg' %}" alt="" class="enlarge-image">
                   <div class="menu-item-content p-4">
                     <div>
                       <span>Rated(5.4)</span>
@@ -375,29 +375,7 @@
               </div>
               <div class="col-lg-3 col-sm-6">
                 <div class="menu-item bg-white shadow-on-hover">
-                  <img src="images/vegan2.jpg" alt="" class="enlarge-image">
-                  <div class="menu-item-content p-4">
-                    <div>
-                      <span>Rated(5.4)</span>
-                      <span class="stars">
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-fill"></i>
-                        <i class="ri-star-half-fill"></i>
-                      </span>
-                    </div>
-                    <h5 class="mt-1 mb-2"><a href="#">Breakfast</a></h5>
-                    <p class="small">Lorem ipsum icing elit. Natus consequatur nostrum id reiciendis. Architecto consectetur dolor impedit! Inventore voluptas corporis ducimus rerum accusamus eum al</p>
-
-                  </div>
-                </div>
-                
-              </div>
-
-              <div class="col-lg-3 col-sm-6">
-                <div class="menu-item bg-white shadow-on-hover">
-                  <img src="images/lunch1.jpg" alt="" class="enlarge-image">
+                  <img src="{% static 'images/vegan2.jpg' %}" alt="" class="enlarge-image">
                   <div class="menu-item-content p-4">
                     <div>
                       <span>Rated(5.4)</span>
@@ -419,7 +397,29 @@
 
               <div class="col-lg-3 col-sm-6">
                 <div class="menu-item bg-white shadow-on-hover">
-                  <img src="images/vegan4.jpg" alt="" class="enlarge-image">
+                  <img src="{% static 'images/lunch1.jpg' %}" alt="" class="enlarge-image">
+                  <div class="menu-item-content p-4">
+                    <div>
+                      <span>Rated(5.4)</span>
+                      <span class="stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                      </span>
+                    </div>
+                    <h5 class="mt-1 mb-2"><a href="#">Breakfast</a></h5>
+                    <p class="small">Lorem ipsum icing elit. Natus consequatur nostrum id reiciendis. Architecto consectetur dolor impedit! Inventore voluptas corporis ducimus rerum accusamus eum al</p>
+
+                  </div>
+                </div>
+                
+              </div>
+
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="{% static 'images/vegan4.jpg' %}" alt="" class="enlarge-image">
                   <div class="menu-item-content p-4">
                     <div>
                       <span>Rated(5.4)</span>
@@ -452,7 +452,7 @@
           <div class="row gy-4">
             <div class="col-lg-3 col-sm-6">
               <div class="menu-item bg-white shadow-on-hover">
-                <img src="images/meat1.jpg" alt="" class="enlarge-image">
+                <img src="{% static 'images/meat1.jpg' %}" alt="" class="enlarge-image">
                 <div class="menu-item-content p-4">
                   <div>
                     <span>Rated(5.4)</span>
@@ -472,29 +472,7 @@
             </div>
             <div class="col-lg-3 col-sm-6">
               <div class="menu-item bg-white shadow-on-hover">
-                <img src="images/meat5.jpg" alt="" class="enlarge-image">
-                <div class="menu-item-content p-4">
-                  <div>
-                    <span>Rated(5.4)</span>
-                    <span class="stars">
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-fill"></i>
-                      <i class="ri-star-half-fill"></i>
-                    </span>
-                  </div>
-                  <h5 class="mt-1 mb-2"><a href="#">Breakfast</a></h5>
-                  <p class="small">Lorem ipsum icing elit. Natus consequatur nostrum id reiciendis. Architecto consectetur dolor impedit! Inventore voluptas corporis ducimus rerum accusamus eum al</p>
-
-                </div>
-              </div>
-              
-            </div>
-
-            <div class="col-lg-3 col-sm-6">
-              <div class="menu-item bg-white shadow-on-hover">
-                <img src="images/meat3.jpg" alt="" class="enlarge-image">
+                <img src="{% static 'images/meat5.jpg' %}" alt="" class="enlarge-image">
                 <div class="menu-item-content p-4">
                   <div>
                     <span>Rated(5.4)</span>
@@ -516,7 +494,29 @@
 
             <div class="col-lg-3 col-sm-6">
               <div class="menu-item bg-white shadow-on-hover">
-                <img src="images/meat4.jpg" alt="" class="enlarge-image">
+                <img src="{% static 'images/meat3.jpg' %}" alt="" class="enlarge-image">
+                <div class="menu-item-content p-4">
+                  <div>
+                    <span>Rated(5.4)</span>
+                    <span class="stars">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-half-fill"></i>
+                    </span>
+                  </div>
+                  <h5 class="mt-1 mb-2"><a href="#">Breakfast</a></h5>
+                  <p class="small">Lorem ipsum icing elit. Natus consequatur nostrum id reiciendis. Architecto consectetur dolor impedit! Inventore voluptas corporis ducimus rerum accusamus eum al</p>
+
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+              <div class="menu-item bg-white shadow-on-hover">
+                <img src="{% static 'images/meat4.jpg' %}" alt="" class="enlarge-image">
                 <div class="menu-item-content p-4">
                   <div>
                     <span>Rated(5.4)</span>
