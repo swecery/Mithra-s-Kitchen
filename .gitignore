@@ -1,0 +1,7 @@
+/myenv
+
+Chinook_Postgresql.sql
+sql-crud.py
+sql-expression.py
+sql-orm.py
+sql-psycopg2.py
