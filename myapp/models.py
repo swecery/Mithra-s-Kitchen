@@ -5,11 +5,10 @@ class User(AbstractUser):
     pass
 
 class Reservation(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reservations')
-    reservation_date = models.DateField()
-    reservation_time = models.TimeField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateField()
+    time = models.TimeField()
+    guests = models.PositiveIntegerField(default=1)
 
     def __str__(self):
-        return f"Reservation for {self.user.username} on {self.reservation_date} at {self.reservation_time}"
+        return f"Reservation by {self.user.username} on {self.date} at {self.time} for {self.guests} guests"

@@ -23,8 +23,10 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('login/', views.user_login, name='login'),
     path('register/', views.register, name='register'),
-    path('reservation/', views.reservation, name='reservation'),
+    #path('reservation/', views.reservation, name='reservation'),
+    path('reservation/', views.make_reservation, name='reservation'),
     path('vegan/', views.vegan, name='vegan'),
     path('logout/', views.user_logout, name='logout'),
+    path('404/', views.custom_404_view, name='404'),
 
 ]

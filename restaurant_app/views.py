@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout, get_user_model
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.core.exceptions import ValidationError
+from myapp.models import Reservation
 User = get_user_model()
 
 # Create your views here.
@@ -63,5 +65,29 @@ def register(request):
 def reservation(request):
     return render(request, 'reservation.html')
 
+@login_required
+def make_reservation(request):
+    if request.method == 'POST':
+        date = request.POST.get('date')
+        time = request.POST.get('time')
+        guests = request.POST.get('guests')
+        if date and time and guests:
+            reservation = Reservation(
+                user=request.user,
+                date=date,
+                time=time,
+                guests=guests
+            )
+            reservation.save()
+            messages.success(request, 'Your reservation was successful.')
+            return redirect('home')
+        else:
+            messages.error(request, 'Please fill in all fields.')
+
+    return render(request, 'reservation.html')
+
 def vegan(request):
     return render(request, 'vegan.html')
+
+def custom_404_view(request, *args, **argv):
+    return render(request, '404.html', status=404)
