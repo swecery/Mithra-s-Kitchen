@@ -17,31 +17,93 @@
 
 <!-- Reservation section -->
 <div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="card-title text-center mb-4">Reservation</h3>
-          <form method="post" action="{% url 'reservation' %}">
-            {% csrf_token %}
-            <div class="mb-3">
-              <label for="date" class="form-label">Date</label>
-              <input type="date" class="form-control" name="date" id="date" required>
-            </div>
-            <div class="mb-3">
-              <label for="time" class="form-label">Time</label>
-              <input type="time" class="form-control" name="time" id="time" required>
-            </div>
-            <div class="mb-3">
-              <label for="guests" class="form-label">Number of Guests</label>
-              <input type="number" class="form-control" name="guests" id="guests" min="1" max="20" required>
-            </div>
-            <div class="d-grid">
-              <button type="submit" class="btn btn-primary btn-block">Reserve</button>
-            </div>
-          </form>
+  <div class="row">
+    <!-- Sidebar for buttons -->
+    <div class="col-3">
+      <a href="{% url 'reservation' %}?section=myreservations" 
+         class="btn {% if section == 'myreservations' %}btn-primary{% else %}btn-secondary{% endif %} mb-2">My Reservations</a>
+      <a href="{% url 'reservation' %}?section=add" 
+         class="btn {% if section == 'add' %}btn-primary{% else %}btn-secondary{% endif %}">Add Reservation</a>
+    </div>
+
+
+    <!-- Content area -->
+    <div class="col-9">
+      {% if section == 'add' %}
+        <!-- Add Reservation Form -->
+        {% if messages %}
+        <div class="container mt-3">
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+          {% endfor %}
         </div>
-      </div>
+        {% endif %}
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title text-center mb-4">Add a Reservation</h3>
+            <form method="post" action="{% url 'reservation' %}">
+              {% csrf_token %}
+              <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" name="date" id="date" required min="{{ today|date:'Y-m-d' }}" max="{{ one_month_ahead|date:'Y-m-d' }}">
+              </div>
+              <div class="mb-3">
+                <label for="time" class="form-label">Time</label>
+                <select name="time" id="time" class="form-control" required>
+                  {% for hour in hours %}
+                    <option value="{{ hour }}">{{ hour }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="guests" class="form-label">Number of Guests</label>
+                <input type="number" class="form-control" name="guests" id="guests" min="1" max="6" value="1" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit Reservation</button>
+            </form>
+          </div>
+        </div>
+        
+
+        {% elif section == 'myreservations' %}
+        <!-- My Reservations Section -->
+        <div id="myReservations">
+          <h3>My Reservations</h3>
+          {% if reservations %}
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Time</th>
+                  <th scope="col">Guests</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for reservation in reservations %}
+                  <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{ reservation.date }}</td>
+                    <td>{{ reservation.time }}</td>
+                    <td>{{ reservation.guests }}</td>
+                    <td>
+                      <form action="{% url 'delete_reservation' reservation.id %}" method="post" onsubmit="return confirm('Are you sure you want to delete?');">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                      </form>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% else %}
+            <p>No reservations found.</p>
+          {% endif %}
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>
