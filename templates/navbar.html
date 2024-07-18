@@ -1,0 +1,59 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
+    <div class="container">
+           <a class="navbar-brand" href="/"></a>
+           <img src="{% static 'images/mithraLogo.png' %}" alt="logo" />
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/reservation">Reservation</a>
+          </li>
+  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/vegan">Vegan</a></li>
+              <li><a class="dropdown-item" href="meat">Meat</a></li>
+              <li><a class="dropdown-item" href="chicken">Chicken</a</li>
+              <li><a class="dropdown-item" href="fish">Fish</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="#" class="btn btn-brand">Order Online</a>
+        <form class="d-flex" role="search">
+          <div class="input-group">
+            <input class="form-control border-end-0" type="search" placeholder="Search" aria-label="Search" />
+          </div>
+        </form>
+        {% if user.is_authenticated %}
+          <div class="d-flex" role="logout">
+            <a href="/logout">
+              <button class="btn btn-outline-danger" type="button">
+                Logout
+              </button>
+            </a>
+          </div>
+        {% else %}
+          <div class="d-flex" role="login">
+            <a href="/login">
+              <button class="btn btn-outline-success" type="button">
+                Login
+              </button>
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
