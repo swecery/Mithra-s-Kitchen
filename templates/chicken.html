@@ -17,9 +17,44 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="{% static 'style.css' %}" />
+
+    <style>
+      .card {
+          border: none;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          transition: transform 0.2s;
+          display: flex;
+          flex-direction: column;
+      }
+      .card:hover {
+          transform: scale(1.05);
+      }
+      .card-img-top {
+          border-radius: 15px 15px 0 0;
+          max-height: 200px;
+          object-fit: cover;
+      }
+      .card-body {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+      .card-title {
+          font-size: 16px;
+          font-weight: bold;
+      }
+      .card-text {
+          font-size: 14px;
+          color: #555;
+      }
+  </style>
   </head>
 
-  <body>
+  <body class="bg-secondary">
+
     <nav class="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
       <div class="container">
         <a class="navbar-brand" href="/"></a>
@@ -81,37 +116,71 @@
     </nav>
 
     <div class="container mt-5">
-      <h1 class="text-center">Vegan Menu</h1>
+      <h1 class="text-center">Chicken Menu</h1>
       <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="{% static 'images/vegan2.jpg' %}" class="card-img-top" alt="Vegan Dish 1">
-            <div class="card-body">
-              <h5 class="card-title">Vegan Dish 1</h5>
-              <p class="card-text">Description of Vegan Dish 1.</p>
-            </div>
+          <div class="col-md-4 d-flex align-items-stretch">
+              <div class="card mb-4">
+                  <img src="{% static 'images/chicken1.jpg' %}" class="card-img-top" alt="Vegan Dish 1">
+                  <div class="card-body">
+                      <h5 class="card-title">Spicy chicken breast</h5>
+                      <p class="card-text">Spicy chicken breast is a dish where chicken breasts are seasoned with spicy spices or sauces, then cooked until tender and flavorful. It’s often served with sides or over a bed of rice for a zesty, satisfying meal.</p>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="{% static 'images/vegan4.jpg' %}" class="card-img-top" alt="Vegan Dish 2">
-            <div class="card-body">
-              <h5 class="card-title">Vegan Dish 2</h5>
-              <p class="card-text">Description of Vegan Dish 2.</p>
-            </div>
+          <div class="col-md-4 d-flex align-items-stretch">
+              <div class="card mb-4">
+                  <img src="{% static 'images/chicken2.jpg' %}" class="card-img-top" alt="Vegan Dish 2">
+                  <div class="card-body">
+                      <h5 class="card-title">Creamy chicken breast</h5>
+                      <p class="card-text">Creamy chicken breast with asparagus features tender chicken in a rich sauce, paired with fresh asparagus.</p>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="{% static 'images/vegan5.jpg' %}" class="card-img-top" alt="Vegan Dish 3">
-            <div class="card-body">
-              <h5 class="card-title">Vegan Dish 3</h5>
-              <p class="card-text">Description of Vegan Dish 3.</p>
-            </div>
+          <div class="col-md-4 d-flex align-items-stretch">
+              <div class="card mb-4">
+                  <img src="{% static 'images/chicken3.jpg' %}" class="card-img-top" alt="Vegan Dish 3">
+                  <div class="card-body">
+                      <h5 class="card-title">Chicken & Avocado Bowl</h5>
+                      <p class="card-text">Chicken Delight with Avocado and Hard-Boiled Eggs.</p>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4">
+                <img src="{% static 'images/chicken4.jpg' %}" class="card-img-top" alt="Vegan Dish 1">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Shish</h5>
+                    <p class="card-text">Enjoy our delicious Chicken Shish, tender marinated chicken skewers grilled to perfection. Served with a fresh, crisp salad, this dish offers a perfect balance of savory and refreshing flavors.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4">
+                <img src="{% static 'images/chicken5.jpg' %}" class="card-img-top" alt="Vegan Dish 2">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken schnitzel</h5>
+                    <p class="card-text">Chicken schnitzel served with creamy Italian pasta features a crispy breaded chicken cutlet alongside pasta in a rich, velvety sauce.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4">
+                <img src="{% static 'images/chicken6.jpg' %}" class="card-img-top" alt="Vegan Dish 3">
+                <div class="card-body">
+                    <h5 class="card-title">Four-Serving Roasted Whole Chicken</h5>
+                    <p class="card-text">A whole roasted chicken for four is seasoned and baked until crispy and juicy, served with a medley of vegetables such as carrots, potatoes, and onions. The vegetables cook alongside the chicken, absorbing its flavors and creating a complete, comforting meal.</p>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+  
+  
 
     <!--footer section-->
     {% include 'footer.html' %}

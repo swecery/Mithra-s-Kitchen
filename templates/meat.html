@@ -17,9 +17,44 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="{% static 'style.css' %}" />
+
+    <style>
+      .card {
+          border: none;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          transition: transform 0.2s;
+          display: flex;
+          flex-direction: column;
+      }
+      .card:hover {
+          transform: scale(1.05);
+      }
+      .card-img-top {
+          border-radius: 15px 15px 0 0;
+          max-height: 200px;
+          object-fit: cover;
+      }
+      .card-body {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+      .card-title {
+          font-size: 16px;
+          font-weight: bold;
+      }
+      .card-text {
+          font-size: 14px;
+          color: #555;
+      }
+  </style>
   </head>
 
-  <body>
+  <body class="bg-secondary">
+
     <nav class="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
       <div class="container">
         <a class="navbar-brand" href="/"></a>
@@ -81,37 +116,71 @@
     </nav>
 
     <div class="container mt-5">
-      <h1 class="text-center">Vegan Menu</h1>
+      <h1 class="text-center">Meat Menu</h1>
       <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="{% static 'images/vegan2.jpg' %}" class="card-img-top" alt="Vegan Dish 1">
-            <div class="card-body">
-              <h5 class="card-title">Vegan Dish 1</h5>
-              <p class="card-text">Description of Vegan Dish 1.</p>
-            </div>
+          <div class="col-md-4 d-flex align-items-stretch">
+              <div class="card mb-4">
+                  <img src="{% static 'images/meat1.jpg' %}" class="card-img-top" alt="Vegan Dish 1">
+                  <div class="card-body">
+                      <h5 class="card-title">Asian-Style Beef Stir-Fry</h5>
+                      <p class="card-text">Enjoy our Asian-Style Beef Stir-Fry, featuring tender beef sautéed with fresh vegetables in a savory soy sauce. Served with fluffy rice.</p>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="{% static 'images/vegan4.jpg' %}" class="card-img-top" alt="Vegan Dish 2">
-            <div class="card-body">
-              <h5 class="card-title">Vegan Dish 2</h5>
-              <p class="card-text">Description of Vegan Dish 2.</p>
-            </div>
+          <div class="col-md-4 d-flex align-items-stretch">
+              <div class="card mb-4">
+                  <img src="{% static 'images/meat3.jpg' %}" class="card-img-top" alt="Vegan Dish 2">
+                  <div class="card-body">
+                      <h5 class="card-title">Italian Bolognese Pasta</h5>
+                      <p class="card-text">Indulge in our Italian Bolognese Pasta, featuring tender noodles topped with a rich and hearty meat sauce made from ground beef.</p>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="{% static 'images/vegan5.jpg' %}" class="card-img-top" alt="Vegan Dish 3">
-            <div class="card-body">
-              <h5 class="card-title">Vegan Dish 3</h5>
-              <p class="card-text">Description of Vegan Dish 3.</p>
-            </div>
+          <div class="col-md-4 d-flex align-items-stretch">
+              <div class="card mb-4">
+                  <img src="{% static 'images/meat4.jpg' %}" class="card-img-top" alt="Vegan Dish 3">
+                  <div class="card-body">
+                      <h5 class="card-title">Beef Meatball Noodle Delight</h5>
+                      <p class="card-text">Savor our Beef Meatball Noodle Delight, featuring tender and flavorful giant beef meatballs served over a bed of stir-fried vegetable noodles.</p>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4">
+                <img src="{% static 'images/meat5.jpg' %}" class="card-img-top" alt="Vegan Dish 1">
+                <div class="card-body">
+                    <h5 class="card-title">Beef Stir-Fry</h5>
+                    <p class="card-text">Savor our Beef Stir-Fry, featuring tender beef slices sautéed with fresh vegetables and served over flavorful vegetable noodles. This dish offers a delightful mix of savory and vibrant flavors.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4">
+                <img src="{% static 'images/meat2.jpg' %}" class="card-img-top" alt="Vegan Dish 2">
+                <div class="card-body">
+                    <h5 class="card-title">Beef Burgundy</h5>
+                    <p class="card-text">Beef Burgundy is a rich French stew made with tender beef slow-cooked in red wine with onions, carrots, and mushrooms. It’s a hearty and flavorful dish.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4">
+                <img src="{% static 'images/meat6.jpg' %}" class="card-img-top" alt="Vegan Dish 3">
+                <div class="card-body">
+                    <h5 class="card-title">Pan Seared Garlic Butter Steak</h5>
+                    <p class="card-text">Pan-seared garlic butter steak is a juicy steak cooked in a hot pan and finished with a rich garlic butter sauce for a flavorful and savory dish.</p>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+  
+  
 
     <!--footer section-->
     {% include 'footer.html' %}
