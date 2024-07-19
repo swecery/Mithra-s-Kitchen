@@ -1,5 +1,13 @@
 # Mithra's Kitchen
 
+###Page Issues and Areas for Improvement
+* The site logo should redirect the user to the home page.
+* The About page is not accessible from the navbar while on the menu page; this needs to be fixed.
+* The Menu and About pages are not accessible from the navbar while on the reservation page; this needs to be fixed.
+* Overall, the site's CSS can be improved.
+* Prices can be added to the dishes.
+* A user-specific page can be created where users can change their nickname or email.
+
 ## Main Technologies
 
 #### Frontend:
@@ -105,6 +113,9 @@ After installation, you can start PostgreSQL using:
 bash
 brew services start postgresql
 ```
+###Validator
+nput validation is missing on all pages.
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
