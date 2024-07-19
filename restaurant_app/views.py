@@ -138,5 +138,14 @@ def delete_reservation(request, id):
 def vegan(request):
     return render(request, 'vegan.html')
 
+def meat(request):
+    return render(request, 'meat.html')
+
+def chicken(request):
+    return render(request, 'chicken.html')
+
+def fish(request):
+    return render(request, 'fish.html')
+
 def custom_404_view(request, *args, **argv):
     return render(request, '404.html', status=404)
