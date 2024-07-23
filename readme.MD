@@ -119,24 +119,24 @@ brew services start postgresql
 
 To run the app locally in the VS Code terminal and manage static files with Heroku, follow these steps:
 
-1. ###Open VS Code Terminal:
+1. ### Open VS Code Terminal:
    - Open your project in Visual Studio Code.
    - Open the terminal by navigating to `View > Terminal´.
 
-2. ###Login to Heroku:
+2. ### Login to Heroku:
    - Ensure you are logged into your Heroku account by running:
      ```sh
      heroku login
      ```
    - Follow the instructions to complete the login process.
 
-3. ###Navigate to Your Project Directory:
+3. ### Navigate to Your Project Directory:
    - Use the `cd` command to navigate to your project directory. For example:
      ```sh
      cd /Users/YourMacUsername/Projects/mithraskitchen
      ```
 
-4. ###Run the App on Heroku:
+4. ### Run the App on Heroku:
    - Use the following command to collect static files and run your app on Heroku:
      ```sh
      heroku run python manage.py collectstatic
