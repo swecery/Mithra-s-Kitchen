@@ -1,6 +1,6 @@
 # Mithra's Kitchen
 
-###Page Issues and Areas for Improvement
+### Page Issues and Areas for Improvement
 * The site logo should redirect the user to the home page.
 * The About page is not accessible from the navbar while on the menu page; this needs to be fixed.
 * The Menu and About pages are not accessible from the navbar while on the reservation page; this needs to be fixed.
@@ -32,8 +32,9 @@ This website showcases the culinary offerings of our restaurant. Here, you can e
 
 All user and reservation data are securely managed and stored in the 'mitraskitchen' database, which is hosted on Heroku.
 
-### Example Demo
-To see an example of your art portfolio and understand how it works, you can click on the following link: [Mithra-s-Kitchen Demo](https://swecery.github.io/Mithra-s-Kitchen)
+### Live Demo 
+You can access the live demo of the project deployed on Heroku from the following link:
+https://mithraskitchen-579acccb5060.herokuapp.com
 
 
 
@@ -113,7 +114,41 @@ After installation, you can start PostgreSQL using:
 bash
 brew services start postgresql
 ```
-###Validator
+
+## Running the App Locally with VS Code Terminal
+
+To run the app locally in the VS Code terminal and manage static files with Heroku, follow these steps:
+
+1. ###Open VS Code Terminal:
+   - Open your project in Visual Studio Code.
+   - Open the terminal by navigating to `View > Terminal´.
+
+2. ###Login to Heroku:
+   - Ensure you are logged into your Heroku account by running:
+     ```sh
+     heroku login
+     ```
+   - Follow the instructions to complete the login process.
+
+3. ###Navigate to Your Project Directory:
+   - Use the `cd` command to navigate to your project directory. For example:
+     ```sh
+     cd /Users/YourMacUsername/Projects/mithraskitchen
+     ```
+
+4. ###Run the App on Heroku:
+   - Use the following command to collect static files and run your app on Heroku:
+     ```sh
+     heroku run python manage.py collectstatic
+     ```
+
+By following these steps, you can manage your Heroku application directly from the VS Code terminal.
+
+
+
+
+
+### Validator
 nput validation is missing on all pages.
 
 ## License
